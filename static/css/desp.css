@@ -44,3 +44,36 @@
 .menucss3 li:hover ul {
    display: block;
 }
+
+
+.banner {
+    background-color: #d7d7d7;
+  max-width: 450px;
+  width: 450px;
+  height: 400px;text-align: left;
+  margin-left: 130px;
+  margin-right: 50px;
+  margin-bottom: 60px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.banner2 {
+    background-color: #d7d7d7;
+  max-width: 450px;
+  width: 450px;
+  height: 400px;
+  text-align: right;
+  float: right;
+  margin-right: 135px;
+  margin-top: -460px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.texto
+{
+   font-family: Arial, sans-serif;
+   font-size: 20px;
+   color: #fff;
+   padding-top: 15px;
+   text-align:center;
+   height: 50px;
+   background-color: #3ead47;
+}
