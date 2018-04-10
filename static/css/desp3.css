@@ -1,0 +1,51 @@
+.Menucss3 ul{
+   display: flex;
+   padding: 0;
+   margin: 0;
+   list-style: none;
+}
+
+.Menucss3 a{
+   display: block;
+   text-decoration: none;
+   color: white;
+}
+
+.Menucss3 a:hover{
+   background-color: #3ead47;
+}
+
+.Menucss3 ul ol ul{
+   display: none;
+}
+
+.Menucss3 ol.parent:hover{
+   list-style-type: none;
+   border:1px #ccc solid;
+   margin:-1px;
+}
+
+
+.Menucss3 li ul {
+   background: rgba(0,0,0,0.9);
+   width: 250px;
+   margin:0;
+   display:none;
+   border:5px #3ead47 solid;
+   position: absolute;
+   top: -100%;
+   top:59px;
+}
+
+.Menucss3  li ul:hover{
+   display: block;
+}
+
+.Menucss3 li:hover ul {
+   display: block;
+}
+
+ol a .logout{
+  background-color: #ff3838;
+  color: #000;
+}

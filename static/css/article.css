@@ -1,0 +1,23 @@
+.form {
+  position: relative;
+  z-index: 1;
+  text-align: left;
+}
+
+.button{
+  margin-right: 60px; 
+  width: 75%;
+  border: 0;
+  padding: 15px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.button a{
+  margin-right: 20px;
+  padding: 20px;
+  background-color: #3ead47;
+}

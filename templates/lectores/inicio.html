@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <link rel="stylesheet" type="text/css" href="static/css/slideshow.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/desp.css">
+
+  <header>
+    <nav>
+      <ul>
+        <li><a class="active" href="{% url 'pagina_inicio' %}">°| INICIO |°</a></li>
+
+        <nav class="menucss3">
+          <li><a href="#">°| QUIENES SOMOS  |°</a>
+            <ul>
+              <ol><a href="#">°| Horario de las Misas |°</a></ol>
+              <ol><a href="#">°| Cursos |°</a></ol>
+            </ul>
+          </li>
+        </nav>
+
+        <nav class="menucss3">
+          <li><a href="{% url 'pagina_inicio' %}">°| NOTICIAS |°</a>
+            <ul>
+              <ol><a href="{% url 'article_reader' %}">°| ARTICULOS |°</a></ol>
+              <ol><a href="{% url 'activity_reader' %}">°| ACTIVIDADES |°</a></ol>
+            </ul>
+          </li>  
+        </nav>
+
+        <nav class="menucss3">
+          <li><a href="{% url 'pagina_inicio' %}">°| COMUNIDAD |°</a>
+            <ul>
+              <ol><a href="{% url 'people_reader' %}">°| MIENBROS DE LA COMUNIDAD |°</a></ol>
+              <ol><a href="#">°|GRUPOS DE LA COMUNIDAD|°</a></ol>
+              <ol><a href="{% url 'foar_reader' %}">°| FAMILIA OAR|°</a></ol>
+              <ol><a href="#">°| SANTOS |°</a></ol>
+            </ul>
+          </li>  
+        </nav>
+
+        <li style="float:right;"> <a href="{% url 'login' %}" class="active">°| Nuestra señora del Socorro |°</a></li>
+      </ul>
+    </nav>  
+  </header>
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <a href="linkaca"><img src="static/img/image1.jpg" class="Foto"></a>
+      <div class="title">Main Fernando
+        <br>
+        <div class="resume">Fernando es un paladin muy conocido que Raiderstain maneja con mucho control.</div>
+      </div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <a href="linkaca"><img src="static/img/image2.jpg" class="Foto"></a>
+      <div class="title">Main gp
+        <br>
+        <div class="resume">Raiderstain co un 63% de winrate intenta ser el mejor pirata de Lan.</div>
+      </div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <a href="linkaca"><img src="static/img/image3.jpg" class="Foto"></a>
+      <div class="title">Main kunkka
+        <br>
+        <div class="resume">uno de los mejores kunkka en la beta de dota 2 actualmente oxidado.</div>
+      </div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
+
+<script>
+  var slideIndex = 0;
+  showSlides();
+
+
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1} 
+    slides[slideIndex-1].style.display = "block"; 
+    setTimeout(showSlides, 5000); // Las img cambia cada 5 seg.
+  }
+</script>
+
+{% endblock %}

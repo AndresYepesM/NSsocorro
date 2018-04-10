@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="/static/css/desp2.css">
+
+
+<header>
+    <nav>
+      <ul>
+          <li><a href="{% url 'home_logeado' %}">°| Inicio |°</a></li>
+          <li><a href="{% url 'nueva_actividad' %}">°| Crear Otra Actividad |°</a></li>
+          <li><a href="{% url 'listado_actividades' %}">°| Menu de las Activiades |°</a></li>
+
+          <nav class="menucss3">
+            <li style="float:right;"><a class="active"> °| Hola {{ user.username }} |°</a>
+                <ul>
+                  <ol><a style="background-color: #ff3838;" href="{% url 'logout' %}">°| Cerrar Sesion |°</a></ol>
+                </ul>
+            </li>  
+          </nav>
+          
+      </ul>
+    </nav>  
+  </header>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <h1>Las nuevas actividades estan publicadas con exito.</h1>
+
+{% endblock %}

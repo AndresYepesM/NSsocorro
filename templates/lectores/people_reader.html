@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="/static/css/cajas.css">
+<link rel="stylesheet" type="text/css" href="/static/css/desp.css">
+
+  <header>
+    <nav>
+      <ul>
+        <li><a class="active" href="{% url 'pagina_inicio' %}">°| INICIO |°</a></li>
+
+        <nav class="menucss3">
+          <li><a href="#">°| QUIENES SOMOS  |°</a>
+            <ul>
+              <ol><a href="#">°| Horario de las Misas |°</a></ol>
+              <ol><a href="#">°| Cursos |°</a></ol>
+            </ul>
+          </li>
+        </nav>
+
+        <nav class="menucss3">
+          <li><a href="{% url 'pagina_inicio' %}">°| NOTICIAS |°</a>
+            <ul>
+              <ol><a href="{% url 'article_reader' %}">°| ARTICULOS |°</a></ol>
+              <ol><a href="{% url 'activity_reader' %}">°| ACTIVIDADES |°</a></ol>
+            </ul>
+          </li>  
+        </nav>
+
+        <nav class="menucss3">
+          <li><a href="{% url 'pagina_inicio' %}">°| COMUNIDAD |°</a>
+            <ul>
+              <ol><a href="{% url 'people_reader' %}">°| MIENBROS DE LA COMUNIDAD |°</a></ol>
+              <ol><a href="#">°|GRUPOS DE LA COMUNIDAD|°</a></ol>
+              <ol><a href="{% url 'foar_reader' %}">°| FAMILIA OAR|°</a></ol>
+              <ol><a href="#">°| SANTOS |°</a></ol>
+            </ul>
+          </li>  
+        </nav>
+
+        <li style="float:right;"> <a href="{% url 'login' %}" class="active">°| Nuestra señora del Socorro |°</a></li>
+      </ul>
+    </nav>  
+  </header>
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <div class="content">
+    {% if posts %}
+      {% for post in posts %}
+        <div class="caja">
+          <img class="circulo" src="{{  post.img.url }}">
+          <h1>{{ post.name }}</h1>
+          <br>
+          <p>{{ post.bio}}</p>
+        </div>
+      {% endfor %}
+    {% else %}
+    <br>
+    <h2> No Hay hay miembros publicados </h2>
+  </div>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+	 <header>
+    	<nav>
+      		<ul>
+            <li><a href="{% url 'home_logeado' %}">°| Inicio |°</a></li>
+        		<li><a href="{% url 'listado_admin' %}">°| Nuevo articulo |°</a></li>
+        		<li><a href="{% url 'listado_actividades' %}">°| Nueva actividad |°</a></li>
+        		<li style="float:right;"><a class="active"> °| Hola {{ user.username }} |°</a></li>
+            <ul>
+              <li style="float: right;"><a href="{% url 'logout' %}" class="logout">°| Cerrar Sesion |°</a></li>
+            </ul>
+      	</ul>
+    	</nav>  
+  	</header>
+
+
+{% endblock %}

@@ -1,0 +1,47 @@
+/* columna de la derecha */
+.leftcolumn {
+  float: left;
+  width: 70%;
+  height: auto;
+}
+
+/* columna de la izquierda */
+.rightcolumn {
+  float: right;
+  width: 26%;
+
+}
+
+.card2{
+  background-color: #d7d7d7;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  padding: 10px;
+  margin-top: 63px;
+  height: auto;
+  width: 350px; 
+}
+
+.card {
+  background-color: #d7d7d7;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  padding: 10px;
+  margin-top: 63px;
+  height: auto;
+}
+
+.row:after {
+  float: center;
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  color:white;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  padding: 20px;
+  text-align: center;
+  background: rgba(0,0,0,0.9);
+  margin-top: 20px;
+}

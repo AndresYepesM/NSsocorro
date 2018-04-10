@@ -1,0 +1,25 @@
+.content{
+  margin-left: 100px;
+  content: inline;
+}
+
+.caja{
+  background-color: #d7d7d7;
+  max-width: 320px;
+  width: auto;
+  height: auto;
+  float: left;
+  padding-right: 100px;
+  margin-right: 50px;
+  margin-bottom: 60px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.circulo {
+  margin-left: 72px;
+  width: 160px;
+  height: 160px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}

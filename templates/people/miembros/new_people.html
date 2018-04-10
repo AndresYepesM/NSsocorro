@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="/static/css/desp2.css">
+
+<header>
+    <nav>
+      <ul>
+          <li><a href="{% url 'home_logeado' %}">°| Inicio |°</a></li>
+
+          <nav class="menucss3">
+            <li style="float:right;"><a class="active"> °| Hola {{ user.username }} |°</a>
+                <ul>
+                  <ol><a style="background-color: #ff3838;" href="{% url 'logout' %}">°| Cerrar Sesion |°</a></ol>
+                </ul>
+            </li>  
+          </nav>
+          
+      </ul>
+    </nav>  
+  </header>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <h1>El Nuevo miembro se ha</h1>
+  <h1>publicado con exito.</h1>
+
+{% endblock %}

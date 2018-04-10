@@ -1,0 +1,55 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background: url(/static/img/fondo2.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/*Barra de Navegacion*/
+header{
+  background: rgba(0,0,0,0.9);
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
+nav ul{
+  list-style:none;
+  overflow: hidden; 
+}
+
+nav ul li{
+  float: left;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+nav ul li a{
+  display: block;
+  padding: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li .active {
+  background-color: #3ead47;
+}
+
+nav ul li .logout{
+  float: right;
+  background-color: #ff3838;
+  text-decoration: none;
+  color: #000;
+}
+
+nav ul li:hover{
+  background: #3ead47;
+
+}

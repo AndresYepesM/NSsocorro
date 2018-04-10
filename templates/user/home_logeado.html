@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="/static/css/desp2.css">
+<link rel="stylesheet" type="text/css" href="/static/css/desp3.css">
+
+	 <header>
+    	<nav>
+      		<ul>
+            <nav class="Menucss3">
+              <li><a href="{% url 'home_logeado' %}">°| Nueva Noticias |°</a>
+                   <ul>
+                      <ol><a href="{% url 'listado_admin' %}">°| Nuevo articulo |°</a></ol>
+                      <ol><a href="{% url 'listado_actividades' %}">°| Nueva actividad |°</a></ol>
+                   </ul>
+              </li>  
+            </nav>
+
+            <nav class="Menucss3">
+              <li><a href="{% url 'home_logeado' %}">°| Nuevo Miembro |°</a>
+                   <ul>
+                      <ol><a href="{% url 'listado_miembros' %}">°| MIENBROS DE LA COMUNIDAD |°</a></ol>
+                      <ol><a href="{% url 'listado_foar' %}">°| FAMILIA OAR|°</a></ol>
+                       <ol><a href="#">°| SANTOS |°</a></ol>
+                   </ul>
+              </li>  
+            </nav>
+
+            <li><a href="https://calendar.google.com/calendar/r?tab=cc">°| Modificar calendario |°</a></li>
+            
+            <nav class="menucss3">
+              <li style="float:right;"><a class="active"> °| Hola {{ user.username }} |°</a>
+                  <ul>
+                    <ol><a href="{% url 'register' %}">°| Registrar nuevos ayudantes |°</a></ol>
+                    <ol><a style="background-color: #ff3838;" href="{% url 'logout' %}">°| Cerrar Sesion |°</a></ol>
+                  </ul>
+              </li>  
+            </nav>
+
+      	</ul>
+    	</nav>  
+  	</header>
+{% endblock %}
