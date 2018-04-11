@@ -50,6 +50,7 @@
     background-color: #d7d7d7;
   max-width: 450px;
   width: 450px;
+  position: static;
   height: 400px;text-align: left;
   margin-left: 130px;
   margin-right: 50px;
@@ -60,6 +61,7 @@
     background-color: #d7d7d7;
   max-width: 450px;
   width: 450px;
+  position: static;
   height: 400px;
   text-align: right;
   float: right;
