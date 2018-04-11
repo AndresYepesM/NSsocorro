@@ -13,7 +13,7 @@ urlpatterns = [
   url(r'^listado_grupos/$', views.grupos_list, name= 'listado_grupos'),
 
   # Mensjase
-  url(r'nuevo_miembro/$', views.new_grupo, name= 'mensaje_grupo'),
+  url(r'nuevo_grupo/$', views.new_grupos, name= 'mensaje_grupo'),
 
   # Crear nuevo Miembro de la Familia oar
   url(r'^nuevo_grupos/$', views.add_grupos, name= 'new_grupos'),

@@ -15,7 +15,7 @@ from .form import Add_grupos
 
 @login_required(login_url= '/login/')
 # Mensaje de los Nuevos Grupos
-def new_grupo(request):
+def new_grupos(request):
 
 	return render(request, 'people/grupos/new_grupos.html')
 
