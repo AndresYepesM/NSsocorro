@@ -19,6 +19,9 @@ urlpatterns = [
 	url(r'^miembros/$', views.people_reader, name= 'people_reader'),
 
 	# PAgina de la Familia OAR
-	url(r'^Familia_oar/$', views.foar_reader, name= 'foar_reader')
+	url(r'^Familia_oar/$', views.foar_reader, name= 'foar_reader'),
+
+	# Pagina para Grupos de la Comunidad
+	url(r'^Grupos_Comunidad', views.grupos_reader, name='grupos_reader'),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

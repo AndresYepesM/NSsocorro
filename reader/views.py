@@ -9,6 +9,7 @@ from django.contrib.auth.decorators import login_required
 from post_article.models import Article
 from post_activity.models import Activity
 from people.models import profile, foar
+from grupsan.models import grupos, santos
 from PIL import ImageFilter
 
 # Create your views here.
@@ -36,3 +37,8 @@ def foar_reader(request):
 
 	context = {'foar': foar.objects.all().order_by('-id')}
 	return render(request, 'lectores/foar_reader.html', context)
+
+def grupos_reader(request):
+
+  context = {'grup': grupos.objects.all().order_by('-id')}
+  return render(request, 'lectores/grupos_reader.html', context)

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<link rel="stylesheet" type="text/css" href="/static/css/center.css">
+<link rel="stylesheet" type="text/css" href="/static/css/cajas.css">
 <link rel="stylesheet" type="text/css" href="/static/css/desp.css">
 
   <header>
@@ -43,30 +43,24 @@
     </nav>  
   </header>
 
-  <div class="center">
-    {% if posts %}
-      {% for post in posts %}
-        <div class="row">
-         <div class="leftcolumn">
-            <div class="card">
-              <h2>{{ post.titulo }}</h2>
-              <h5>{{post.fp}}</h5>
-              <br>
-              <p style="height: auto;">{{ post.cuerpo|safe}}</p>
-              <br>
-              <br>
-              <br>
-            </div>
-          </div>
-        </div>      
-      {% endfor %}
-   {% else %}
-      <br>
-      <br>
-      <br>
-      <br>
-      <h2 style="float:left;"> No Hay Noticias que Mostrar </h2>
-    {% endif %}
-  </div>
+  <br>
+  <br>
+  <br>
+  <br>
 
+  <div class="content">
+    {% if grup %}
+      {% for post in grup %}
+        <div class="caja">
+          <img class="circulo" src="{{  post.ig.url }}">
+          <h2>{{ post.nm }}</h2>
+          <br>
+          <p>{{ post.bg }}</p>
+        </div>
+      {% endfor %}
+    {% else %}
+    <br>
+    <h2> No Hay hay grupos publicados </h2>
+  </div>
+    {% endif %}
 {% endblock %}
