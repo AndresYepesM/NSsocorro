@@ -27,7 +27,7 @@ def grupos_list(request):
   return render(request, 'people/grupos/list_grupos_menu.html', context)
 
 @login_required(login_url= '/login/')
-# Agregar FOAR
+# Agregar Grupos
 def add_grupos(request):
 
   if request.method == 'POST':
@@ -40,3 +40,27 @@ def add_grupos(request):
 
   context = {'form' : form}
   return render(request, 'people/grupos/add_grupos.html', context)
+
+@login_required(login_url= '/login/')
+# Editar Grupos
+def grupos_edit(request, id):
+
+  post = get_object_or_404(grupos, id=id)
+  if request.method == 'POST':
+    form = Add_grupos(request.POST, request.FILES, instance=post)
+    if form.is_valid():
+      post = form.save(commit= False)
+      post.save()
+      return redirect('listado_grupos')
+  else:
+    form = Add_grupos(instance=post)
+  context = {'form' : form}
+  return render(request, 'people/grupos/edit_grupos.html', context)
+
+@login_required(login_url= '/login/')
+# Borrar Grupos
+def delete_grupos(request, id):
+
+  post = get_object_or_404(grupos, id=id)
+  post.delete()
+  return redirect('listado_grupos')

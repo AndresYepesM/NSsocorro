@@ -18,4 +18,10 @@ urlpatterns = [
   # Crear nuevo Miembro de la Familia oar
   url(r'^nuevo_grupos/$', views.add_grupos, name= 'new_grupos'),
 
+  # Editar Grupos de la Comunidad
+  url(r'^(?P<id>\d+)/grupos_edit$', views.grupos_edit, name = 'edit_grupos'),
+
+  # Borrar Grupos de la Comunidad
+  url(r'^(?P<id>\d+)/grupos_delete$', views.delete_grupos, name = 'delete_grupos'),
+
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -38,8 +38,8 @@
             <br>
             <div class="form">
               <div class="button">
-                <a href="#"> °| EDITAR  |°</a>
-                <a href="#"> °| BORRAR  |°</a>  
+                <a href="{% url 'edit_grupos' id=post.id %}"> °| EDITAR  |°</a>
+                <a href="{% url 'delete_grupos' id=post.id %}"> °| BORRAR  |°</a>  
               </div>
             </div>
           </div>
