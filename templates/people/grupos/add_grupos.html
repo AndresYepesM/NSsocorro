@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="/static/css/boxie.css">
+<link rel="stylesheet" type="text/css" href="/static/css/desp2.css">
+
+<header>
+   	<nav>
+     	<ul>
+       		<li><a href="{% url 'home_logeado' %}">°| Inicio |°</a></li>
+       		<li><a href="#">°| Lista de los Grupos|°</a></li>
+
+          <nav class="menucss3">
+            <li style="float:right;"><a class="active"> °| Hola {{ user.username }} |°</a>
+                <ul>
+                  <ol><a style="background-color: #ff3838;" href="{% url 'logout' %}">°| Cerrar Sesion |°</a></ol>
+                </ul>
+            </li>  
+          </nav>
+
+     	</ul>
+   	</nav>  
+</header>
+
+<br>
+<br>
+<br>
+<br>
+<center>
+  <div class="box">
+    <div class="divd">
+      <form class="form" method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          {{ form.as_p }}
+          {{ form.media }}
+          <br>
+          <button type="submit">Publicar</button>
+      </form>
+    </div>
+  </div>
+</center>
+{% endblock %}
