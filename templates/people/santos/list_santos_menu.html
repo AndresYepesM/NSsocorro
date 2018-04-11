@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="/static/css/article.css">
+<link rel="stylesheet" type="text/css" href="/static/css/column.css">
+<link rel="stylesheet" type="text/css" href="/static/css/img.css">
+<link rel="stylesheet" type="text/css" href="/static/css/desp2.css">
+
+<header>
+  <nav>
+    <ul>
+        <li><a href="{% url 'home_logeado' %}">°| Inicio |°</a></li>
+        <li><a href="#">°| Nuevo Santo |°</a></li>
+        
+        <nav class="menucss3">
+            <li style="float:right;"><a class="active"> °| Hola {{ user.username }} |°</a>
+                <ul>
+                  <ol><a style="background-color: #ff3838;" href="{% url 'logout' %}">°| Cerrar Sesion |°</a></ol>
+                </ul>
+            </li>  
+          </nav>
+        
+    </ul>
+  </nav>  
+</header>
+
+{% if santos %}
+    {% for post in santos %}
+      <div class="row">
+       <div class="leftcolumn">
+          <div class="card">
+            <h2>{{ post.nombre }}</h2>
+            <br>
+      <!--  <img class="fakeimg" src=" {{ post.img.url }} ">
+            <br>
+            <br>
+            <p>{{ post.bio }}</p> -->
+            <br>
+            <div class="form">
+              <div class="button">
+                <a href="#"> °| EDITAR  |°</a>
+                <a href="#"> °| BORRAR  |°</a>  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>      
+    {% endfor %}
+ {% else %}
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2> No Hay hay santos publicados </h2>
+  {% endif %}
+{% endblock %}
