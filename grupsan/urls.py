@@ -15,7 +15,7 @@ urlpatterns = [
   # Mensjase
   url(r'nuevo_miembro/$', views.new_grupo, name= 'mensaje_grupo'),
 
-  # Agregar un Nuevo Grupo de la Comunidad
-  #url(r'^nuevo_grupo/$', vies)
+  # Crear nuevo Miembro de la Familia oar
+  url(r'^nuevo_grupos/$', views.add_grupos, name= 'new_grupos'),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
