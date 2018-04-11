@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'post_article',
     'post_activity',
     'people',
+    'grupsan',
 ]
 
 MIDDLEWARE = [

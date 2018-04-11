@@ -20,8 +20,11 @@ urlpatterns = [
     # App Para Agregar Actividades.
     url(r'^', include('post_activity.urls')),
 
-    # App para Personas de la parroquia
+    # App para Familia OAR, Miembros de la Comunidad
     url(r'^', include('people.urls')),
+
+    # App Para Grupos y Santos
+    url(r'^', include('grupsan.urls')),
 
     # CKEDITOR Editor de Documentos Online.
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),

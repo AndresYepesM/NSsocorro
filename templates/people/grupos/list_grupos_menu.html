@@ -24,12 +24,12 @@
   </nav>  
 </header>
 
-{% if grupos %}
-    {% for post in grupos %}
+{% if grup %}
+    {% for post in grup %}
       <div class="row">
        <div class="leftcolumn">
           <div class="card">
-            <h2>{{ post.nombre }}</h2>
+            <h2>{{ post.nm }}</h2>
             <br>
       <!--  <img class="fakeimg" src=" {{ post.img.url }} ">
             <br>
@@ -38,8 +38,8 @@
             <br>
             <div class="form">
               <div class="button">
-                <a href="{% url 'edit_grupos' id=post.id %}"> °| EDITAR  |°</a>
-                <a href="{% url 'delete_grupos' id=post.id %}"> °| BORRAR  |°</a>  
+                <a href="#"> °| EDITAR  |°</a>
+                <a href="#"> °| BORRAR  |°</a>  
               </div>
             </div>
           </div>
