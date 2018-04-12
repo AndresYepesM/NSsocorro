@@ -13,6 +13,8 @@ from .form import Add_grupos
 
 # Create your views here.
 
+############################################ Grupos de la Comunidad ##############################################
+
 @login_required(login_url= '/login/')
 # Mensaje de los Nuevos Grupos
 def new_grupos(request):
@@ -64,3 +66,6 @@ def delete_grupos(request, id):
   post = get_object_or_404(grupos, id=id)
   post.delete()
   return redirect('listado_grupos')
+
+
+############################################ Santos de la Comunidad ##############################################
