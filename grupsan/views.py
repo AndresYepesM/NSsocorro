@@ -8,8 +8,8 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.core.files.storage import FileSystemStorage
 from PIL import ImageFilter
-from .models import grupos
-from .form import Add_grupos
+from .models import grupos, santos
+from .form import Add_grupos, Add_santos
 
 # Create your views here.
 
@@ -69,3 +69,55 @@ def delete_grupos(request, id):
 
 
 ############################################ Santos de la Comunidad ##############################################
+
+@login_required(login_url='/login/')
+# Mensajes de los Santos
+def new_santos(request):
+
+  return render(request, 'people/santos/new_santos.html')
+
+@login_required(login_url='/login/')
+# Listado de los Santos de la comunidad
+def santos_list(request):
+
+  context = {'sants': santos.objects.all().order_by('-id')}
+  return render(request, 'people/santos/list_santos_menu.html', context)
+
+@login_required(login_url='/login/')
+# Agregar Santos de la Comunidad
+def add_santos(request):
+
+  if request.method == 'POST':
+    form = Add_santos(request.POST, request.FILES)
+    if form.is_valid():
+      form.save()
+      return HttpResponseRedirect(reverse('mensajes_santos'))
+  else:
+    form = Add_santos
+
+  context = {'form' : form}
+  return render(request, 'people/santos/add_santos.html', context)
+
+@login_required(login_url='/login/')
+# Editar Santos
+def santos_edit(request, id):
+
+  post = get_object_or_404(santos, id=id)
+  if request.method == 'POST':
+    form = Add_santos(request.POST, request.FILES, instance= post)
+    if form.is_valid():
+      post = form.save(commit = False)
+      post.save()
+      return redirect('listado_santos')
+  else:
+    form = Add_santos(instance= post)
+  context = {'form': form}
+  return render(request, 'people/santos/edit_santos.html', context)
+
+@login_required(login_url= '/login/')
+# Borrar Santos
+def santos_delete(request, id):
+
+  post = get_object_or_404(santos, id=id)
+  post.delete()
+  return redirect('listado_santos')

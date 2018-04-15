@@ -8,3 +8,9 @@ class Add_grupos(forms.ModelForm):
   class Meta:
     model = grupos
     fields = ('nm', 'bg', 'ig',)
+
+
+class Add_santos(forms.ModelForm):
+	class Meta:
+		model = santos
+		fields = ('nms', 'bgs', 'imgs')
