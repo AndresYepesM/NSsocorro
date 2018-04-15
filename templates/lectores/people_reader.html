@@ -7,7 +7,7 @@
   <header>
     <nav>
       <ul>
-        <li><a class="active" href="{% url 'pagina_inicio' %}">°| INICIO |°</a></li>
+        <li><a href="{% url 'pagina_inicio' %}">°| INICIO |°</a></li>
 
         <nav class="menucss3">
           <li><a href="#">°| QUIENES SOMOS  |°</a>
@@ -28,7 +28,7 @@
         </nav>
 
         <nav class="menucss3">
-          <li><a href="{% url 'pagina_inicio' %}">°| COMUNIDAD |°</a>
+          <li><a class="active" href="{% url 'pagina_inicio' %}">°| COMUNIDAD >>> Miembros |°</a>
             <ul>
               <ol><a href="{% url 'people_reader' %}">°| MIEMBROS DE LA COMUNIDAD |°</a></ol>
               <ol><a href="{% url 'grupos_reader' %}">°|GRUPOS DE LA COMUNIDAD|°</a></ol>
