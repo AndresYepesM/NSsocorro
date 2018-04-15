@@ -91,7 +91,7 @@ def add_santos(request):
     form = Add_santos(request.POST, request.FILES)
     if form.is_valid():
       form.save()
-      return HttpResponseRedirect(reverse('mensajes_santos'))
+      return HttpResponseRedirect(reverse('mensaje_santos'))
   else:
     form = Add_santos
 

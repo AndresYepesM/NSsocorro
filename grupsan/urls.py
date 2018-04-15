@@ -30,7 +30,7 @@ urlpatterns = [
   url(r'^listado_santos/$', views.santos_list, name= 'listado_santos'),
 
   # Mensjase
-  url(r'nuevo_santos/$', views.new_santos, name= 'mensaje_santos'),
+  url(r'Mensaje_santos/$', views.new_santos, name= 'mensaje_santos'),
 
   # Crear nuevo Miembro de la Familia oar
   url(r'^nuevo_santos/$', views.add_santos, name= 'new_santos'),

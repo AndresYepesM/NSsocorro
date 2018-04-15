@@ -10,7 +10,7 @@
   <nav>
     <ul>
         <li><a href="{% url 'home_logeado' %}">°| Inicio |°</a></li>
-        <li><a href="#">°| Nuevo Santo |°</a></li>
+        <li><a href="{% url 'new_santos' %}">°| Nuevo Santo |°</a></li>
         
         <nav class="menucss3">
             <li style="float:right;"><a class="active"> °| Hola {{ user.username }} |°</a>
@@ -24,12 +24,12 @@
   </nav>  
 </header>
 
-{% if santos %}
-    {% for post in santos %}
+{% if sants %}
+    {% for post in sants %}
       <div class="row">
        <div class="leftcolumn">
           <div class="card">
-            <h2>{{ post.nombre }}</h2>
+            <h2>{{ post.nms }}</h2>
             <br>
       <!--  <img class="fakeimg" src=" {{ post.img.url }} ">
             <br>
@@ -38,8 +38,8 @@
             <br>
             <div class="form">
               <div class="button">
-                <a href="#"> °| EDITAR  |°</a>
-                <a href="#"> °| BORRAR  |°</a>  
+                <a href="{% url 'edit_santos' id=post.id %}"> °| EDITAR  |°</a>
+                <a href="{% url 'delete_santos' id=post.id %}"> °| BORRAR  |°</a>  
               </div>
             </div>
           </div>
