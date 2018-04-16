@@ -29,7 +29,7 @@
         </nav>
 
         <nav class="menucss3">
-          <li><a class="active" href="{% url 'pagina_inicio' %}">°| COMUNIDAD >>>> Familia OAR|°</a>
+          <li><a class="active" href="{% url 'pagina_inicio' %}">°| COMUNIDAD >>>> Santos|°</a>
             <ul>
               <ol><a href="{% url 'people_reader' %}">°| MIEMBROS DE LA COMUNIDAD |°</a></ol>
               <ol><a href="{% url 'grupos_reader' %}">°|GRUPOS DE LA COMUNIDAD|°</a></ol>
@@ -50,18 +50,18 @@
   <br>
 
   <div class="content">
-    {% if foar %}
-      {% for post in foar %}
+    {% if sants %}
+      {% for post in sants %}
         <div class="caja">
           <img class="circulo" src="{{  post.imgs.url }}">
-          <h2>{{ post.nombre }}</h2>
+          <h2>{{ post.nms }}</h2>
           <br>
-          <p>{{ post.biog}}</p>
+          <p>{{ post.bgs }}</p>
         </div>
       {% endfor %}
     {% else %}
     <br>
-    <h2> No Hay hay miembros publicados </h2>
+    <h2> No Hay hay grupos publicados </h2>
   </div>
     {% endif %}
 {% endblock %}

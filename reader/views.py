@@ -42,3 +42,8 @@ def grupos_reader(request):
 
   context = {'grup': grupos.objects.all().order_by('-id')}
   return render(request, 'lectores/grupos_reader.html', context)
+
+def santos_reader(request):
+
+	context = {'sants': santos.objects.all().order_by('-id')}
+	return render(request, 'lectores/santos_reader.html', context)

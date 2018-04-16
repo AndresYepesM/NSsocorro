@@ -24,4 +24,7 @@ urlpatterns = [
 	# Pagina para Grupos de la Comunidad
 	url(r'^Grupos_Comunidad', views.grupos_reader, name='grupos_reader'),
 
+	# Pagina de Santos
+	url(r'^Santos_Comunidad', views.santos_reader, name='santos_reader')
+
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

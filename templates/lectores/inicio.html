@@ -13,8 +13,9 @@
         <nav class="menucss3">
           <li><a href="#">°| QUIENES SOMOS  |°</a>
             <ul>
-              
+              <ol><a href="#">°| La Parroquia |°</a></ol>
               <ol><a href="#">°| Cursos |°</a></ol>
+              <ol><a href="#">°| Contactanos |°</a></ol>
             </ul>
           </li>
         </nav>
@@ -34,7 +35,7 @@
               <ol><a href="{% url 'people_reader' %}">°| MIEMBROS DE LA COMUNIDAD |°</a></ol>
               <ol><a href="{% url 'grupos_reader' %}">°|GRUPOS DE LA COMUNIDAD|°</a></ol>
               <ol><a href="{% url 'foar_reader' %}">°| FAMILIA OAR|°</a></ol>
-              <ol><a href="#">°| SANTOS |°</a></ol>
+              <ol><a href="{% url 'santos_reader' %}">°| SANTOS |°</a></ol>
             </ul>
           </li>  
         </nav>
