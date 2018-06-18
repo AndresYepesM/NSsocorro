@@ -13,6 +13,7 @@ from grupsan.models import grupos, santos
 from PIL import ImageFilter
 
 # Create your views here.
+# Paginas de los Letores
 
 def inicio(request):
 	
